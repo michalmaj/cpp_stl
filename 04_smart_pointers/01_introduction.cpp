@@ -23,3 +23,16 @@
  *    automatically. Deletes the resource, if the reference counter is 0.
  *  - std::weak_ptr added in C++11. Helps to break cycles of std::shared_ptr. Doesn't modify the reference counter.
  */
+#include <iostream>
+#include <memory>
+
+int main(){
+    std::unique_ptr<int> i_uptr = std::make_unique<int>(5);
+    std::shared_ptr<int> i_sptr = std::make_shared<int>(16);
+    std::weak_ptr<int> i_wptr = i_sptr;
+
+    std::cout << *i_uptr << std::endl;
+    std::cout << *i_sptr << std::endl;
+
+    return 0;
+}
