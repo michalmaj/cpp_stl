@@ -44,6 +44,16 @@
  *  std::chrono::milliseconds - ms
  *  std::chrono::microseconds - us
  *  std::chrono::nanoseconds - ns
+ *
+ * Clock
+ * The clock consists of a starting point and a tick. So we can get the current time with the method now.
+ *  std::chrono::system_clock: system time, which we can synchronize with the external clock.
+ *  std::chrono::steady_clock: clock, which can not be adjusted.
+ *  std::chrono::high_resolution_clock: system time with the greatest accuracy.
+ *
+ * std::chrono::system_clock will refer typically to the 1.1.1970. We can not adjust std::steady_clock forward or
+ * backward in opposite to two other clock. The methods to_time_t and from_time_t can be used to convert between
+ * std::chrono::system_clock and std::time_t object.
  */
 #include <chrono>
 #include <iostream>
