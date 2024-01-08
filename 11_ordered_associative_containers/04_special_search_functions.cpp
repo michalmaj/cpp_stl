@@ -37,6 +37,5 @@ int main() {
     auto idxLast = std::distance(mySet.begin(), pair.second);
     std::cout << "Indexes of first and after last occurrence of value 3: " << idxFirst << ", " << idxLast << "\n";
 
-
     return 0;
 }
