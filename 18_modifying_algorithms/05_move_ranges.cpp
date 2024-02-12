@@ -26,6 +26,14 @@ int main(){
     std::ranges::move(myVec, myVec2.begin());
     for (const auto& e : myVec2) std::cout << e << " ";
 
+    std::cout << "\n\n";
+
+    std::string str{"abcdefghijklmnop"};
+    std::string str2{"---------------------"};
+
+    std::ranges::move_backward(str, str2.end());
+    std::cout << str2 << "\n";
+
 
     return 0;
 }
